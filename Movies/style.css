@@ -1,0 +1,110 @@
+div{
+    border: 3px solid black;
+}
+
+.criteres{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px;
+}
+.filmA {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+iframe {
+    width: 25%;
+    height: 10%;
+    margin: 5px;
+}
+img {
+    width: 7%;
+    height: 35%;
+    margin: 5px;
+}
+.filmB {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmC {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmD {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmE {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmF {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmG {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmH {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmI {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
+.filmJ {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    margin: 5%;
+    border: 5px thin salmon;
+    justify-content: space-between;
+}
