@@ -2,6 +2,10 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+input {
+    background-color: gold;
+    color: violet;
+}
 header .display-4{
     background-color: lightskyblue;
     display: flex;
@@ -17,6 +21,10 @@ header .container .lead{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+h1 {
+    font-weight: lighter;
+    color: gold;
 }
 .badge {
     margin-top: 90%;

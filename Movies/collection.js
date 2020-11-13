@@ -12,19 +12,19 @@ const category = [{
     },
     {
         names: 'Crime',
-        style: 'badge badge-pill badge-dark'
+        style: 'badge badge badge-pill badge-dark'
     },
     {
         names: 'Guerre',
-        style: 'badge badge-pill badge-danger'
+        style: 'badge badge badge-pill badge-danger'
     },
     {
         names: 'Espionnage',
-        style: 'badge-pill badge-success'
+        style: 'badge badge-pill badge-success'
     },
     {
         names: 'Comédie',
-        style: 'badge-pill badge-primary'
+        style: 'badge badge-pill badge-primary'
     }
 ]
 
@@ -71,7 +71,7 @@ const collection = [{
     {
         name: 'The King',
         author: 'David Michod',
-        categorie: [category[4][1]],
+        categorie: [category[4], category[1]],
         iframe: '<iframe src="https://www.youtube.com/embed/svVykTznk9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
         description: 'Hal est un jeune prince rebelle, qui décide de quitter le royaume afin de vivre auprès du peuple. Il est couronné roi à son tour et le jeune Henri V doit désormais affronter le chaos laissé par son père derrière lui.',
         bgimage: 'bg-image6'
@@ -141,7 +141,7 @@ for (let element of collection) {
     cardBack.className = 'flip-card-back';
 
     const title = document.createElement('h1');
-    title.className = element.name;
+    title.textContent = element.name;
 
 
 
@@ -157,3 +157,58 @@ for (let element of collection) {
     cardBack.appendChild(title);
 
 }
+
+function filterSeries(pattern) {
+    const results = []
+
+    for (let serie of collection) {
+        if (serie.name.match(pattern) || serie.description.match(pattern))
+            results.push(serie)
+    }
+
+    const resultsDiv = document.querySelector('#results')
+    document.querySelector('#results').innerHTML = "";
+    mainFlex.innerHTML = " ";
+
+    for (let element of collection) {
+        const card = document.createElement('div');
+        card.className = 'flip-card';
+
+        const newCard = document.createElement('div');
+        newCard.className = 'flip-card-inner';
+
+
+        const cardBg = document.createElement('div');
+        cardBg.className = 'flip-card-front';
+
+
+        const bgImage = document.createElement('div');
+        bgImage.className = element.bgimage;
+
+
+        for (let badge of element.categorie) {
+            const category = document.createElement('span');
+            category.textContent = badge.names;
+            category.className = badge.style;
+            bgImage.appendChild(category);
+        }
+
+        const cardBack = document.createElement('div');
+        cardBack.className = 'flip-card-back';
+
+        const title = document.createElement('h1');
+        title.textContent = element.name;
+
+        resultsDiv.appendChild(card);
+        card.appendChild(newCard);
+        newCard.appendChild(cardBg);
+        cardBg.appendChild(bgImage);
+        newCard.appendChild(cardBack);
+        cardBack.appendChild(title);
+
+    }
+}
+    document.querySelector('#filter_input')
+        .addEventListener('change', input => {
+            filterSeries(input.target.value)
+        })
